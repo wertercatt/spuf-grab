@@ -58,7 +58,7 @@ if not WGET_LUA:
 #
 # Update this each time you make a non-cosmetic change.
 # It will be added to the WARC files and reported to the tracker.
-VERSION = "20170520.02"
+VERSION = "20170520.03"
 USER_AGENT = 'ArchiveTeam'
 TRACKER_ID = 'spuf'
 TRACKER_HOST = 'tracker.archiveteam.org'
@@ -181,6 +181,7 @@ class WgetArgs(object):
             "--domains", "steampowered.com",
             "--span-hosts",
             "--waitretry", "30",
+            "--header", "Cookie: bblastvisit=1495056394; __utmt=1; bblastactivity=0; bbsessionhash=03948598c9a709717277ba412e5ff352; bbforum_view=e62f44913aeb32d4ddc2ee89de61e6c886b6992da-2-%7Bi-14_i-1495057128_i-1189_i-1495057156_%7D; __utma=127613338.730818989.1493599611.1495044823.1495054243.8; __utmb=127613338.150.10.1495054243; __utmc=-127613338; __utmz=127613338.1494988830.5.3.utmcsr=chat.efnet.org:9090|utmccn=(referral)|utmcmd=referral|utmcct=/"
             "--warc-file", ItemInterpolation("%(item_dir)s/%(warc_file_base)s"),
             "--warc-header", "operator: Archive Team",
             "--warc-header", "steam-users-forum-dld-script-version: " + VERSION,
